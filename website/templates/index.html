@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 id="title">Title is here!</h1>
+    <table class="table">
+        {% for movie in movies %}
+            <tr>
+                <td>
+                    {{ movie.name }}
+                </td>
+                <td>
+                    {{ movie.rating }}
+                </td>
+                <td>
+                    <img src="/media/{{ movie.cover }}">
+
+                </td>
+            </tr>
+        {% endfor %}
+        <button class="btn btn-primary">Бутона!</button>
+    </table>
+{% endblock %}
